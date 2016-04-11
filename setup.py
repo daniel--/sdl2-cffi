@@ -17,7 +17,7 @@ if sys.platform.startswith('win'):  # windows
     for devel_root in devel_roots:
         dll_sources = glob.glob(os.sep.join([devel_root, 'lib', architecture, '*.dll']))
         dll_dest = 'sdl2'
-        for dll_source in dll_sources
+        for dll_source in dll_sources:
             print('Copying {} to {}'.format(dll_source, dll_dest))
             shutil.copy(dll_source, dll_dest)
     package_data['sdl2'] = ['*.dll']
