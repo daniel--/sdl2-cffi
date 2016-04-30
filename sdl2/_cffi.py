@@ -25,7 +25,6 @@ DEFINE_BLACKLIST = {
     'Mix_SetError',
     'TTF_GetError',
     'TTF_SetError',
-    'SDL_snprintf'
 }
 
 # define GCC specific compiler extensions away
@@ -215,7 +214,7 @@ for header_path in HEADERS:
     with open(os.sep.join([include_dir, header_path]), 'r') as header_file:
         header = header_file.read()
         for match in DEFINE_PATTERN.finditer(header):
-            if match.group(1) in DEFINE_BLACKLIST:
+            if match.group(1) in DEFINE_BLACKLIST or match.group(1) in collector.typedecls or match.group(1) in collector.functions:
                 continue
             try:
                 int(match.group(2), 0)
