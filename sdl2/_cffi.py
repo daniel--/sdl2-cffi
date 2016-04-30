@@ -25,6 +25,7 @@ DEFINE_BLACKLIST = {
     'Mix_SetError',
     'TTF_GetError',
     'TTF_SetError',
+    'SDL_snprintf'
 }
 
 # define GCC specific compiler extensions away
