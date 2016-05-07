@@ -47,7 +47,13 @@ DEFINE_BLACKLIST = {
     'SDL_sscanf',
     'SDL_vsscanf',
     'SDL_snprintf',
-    'SDL_vsnprintf'
+    'SDL_vsnprintf',
+    'SDL_PRINTF_FORMAT_STRING',
+    'SDL_PRIX64',
+    'SDL_PRIs64',
+    'SDL_PRIu64',
+    'SDL_PRIx64',
+    'SDL_SCANF_FORMAT_STRING'
 }
 
 # define GCC specific compiler extensions away
