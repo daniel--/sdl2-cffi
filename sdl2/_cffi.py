@@ -122,6 +122,7 @@ HEADERS = [
     'SDL_image.h',
     'SDL_mixer.h',
     'SDL_ttf.h',
+
 ]
 
 ROOT_HEADERS = [
@@ -129,12 +130,14 @@ ROOT_HEADERS = [
     'SDL_image.h',
     'SDL_mixer.h',
     'SDL_ttf.h',
+    'SDL2_gfxPrimitives.h'
 ]
 
 EXTRA_LIBS = [
     'SDL2_image',
     'SDL2_mixer',
     'SDL2_ttf',
+    'SDL2_gfx',
 ]
 
 class Collector(c_ast.NodeVisitor):
